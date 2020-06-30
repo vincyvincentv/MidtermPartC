@@ -17,26 +17,37 @@ import java.util.Scanner;
  */
 public class ArithmeticBase 
 {
+
+ 
  public double x,y;
+ private VINCYVINCENT_OPERATIONTYPE type;
  public enum VINCYVINCENT_OPERATIONTYPE {PLUS,MINUS,TIMES,DIVIDE};
-    double calculate(double x, double y) 
-        {
-        Scanner sc =new Scanner(System.in);
-        System.out.println("Enter arithmetic operation to Perform: ");
-        String s= sc.next();
-        switch (s.toUpperCase()) 
-        {
-            case "PLUS":
-                return x + y;
-            case "MINUS":
-                return x - y;
-            case "TIMES":
-                return x * y;
-            case "DIVIDE":
-                return x / y;
-            default:
-                throw new AssertionError("Unknown operations " + this);
-        }
+ 
+    void calculate(double x, double y){ 
+       
+        
+           System.out.println(x +" + "+y+" = "+(x + y));
+            System.out.println(x +" - "+y+" = "+(x - y));
+            System.out.println(x +" * "+y+" = "+(x * y));
+            System.out.println(x +" / "+y+" = "+(x / y));
+            
+             
+    }
+
+    
+      /**
+     * @return the type
+     */
+    public VINCYVINCENT_OPERATIONTYPE getType() {
+        return type;
+    }
+
+    /**
+     * @param type the type to set
+     */
+    public void setType(VINCYVINCENT_OPERATIONTYPE type) {
+        this.type = type;
     }
    
 }
+
